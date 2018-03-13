@@ -12,13 +12,19 @@ namespace TicTac
 
         public int getState() { return state; }
 
+        public void Tuc()
+        {
+            Console.WriteLine("Tuc");
+            state = 1;
+        }
+
         public void Tic(){
             Console.Write("Tic-");
             state = 2;
         }
         public void Tak(){
-            Console.WriteLine("Tak");
-            state = 1;
+            Console.Write("Tak-");
+            state = 3;
         }
     }
 }

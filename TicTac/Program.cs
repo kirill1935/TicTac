@@ -18,21 +18,27 @@ namespace TicTac
             
             Thread thread1 = new Thread(pThreadStart);
             Thread thread2 = new Thread(pThreadStart);
+            Thread thread3 = new Thread(pThreadStart);
 
             State state1 = new State();
             State state2 = new State();
+            State state3 = new State();
 
             state1.Id = 1;
             state1.Resource = resource;
-            state1.Count = 30;
+            state1.Count = 15;
 
             state2.Id = 2;
             state2.Resource = resource;
-            state2.Count = 30;
+            state2.Count = 15;
 
-            thread2.Start(state2);
+            state3.Id = 3;
+            state3.Resource = resource;
+            state3.Count = 15;
+
             thread1.Start(state1);
-            
+            thread2.Start(state2);
+            thread3.Start(state3);
         }
     }
 }
